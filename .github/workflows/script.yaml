@@ -2,6 +2,8 @@ name: 自动获取ss节点
 
 on:
   workflow_dispatch:  # 使工作流支持手动触发
+  schedule:
+  - cron: 0 5 * * *  # 北京时间定时触发
   push:
     branches:
       - main  # 当推送到 main 分支时触发
